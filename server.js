@@ -3,7 +3,7 @@ require('isomorphic-fetch')
 const redis = require('redis')
 const router = express.Router()
 const client = redis.createClient({
-    host:'127.0.0.1',
+    host:'loacalhost',
     port:6379
 })
 
@@ -11,7 +11,7 @@ const client = redis.createClient({
 
 
 router.get('/',async(req, res)=>{
-            res.send("Hello")
+            res.send("Hello World")
 })
 
 module.exports = router
